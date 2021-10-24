@@ -1,0 +1,21 @@
+<h4>Inventory</h4>
+<ol class="collection">
+    <%= for product <- @products do %>
+        <li class="collection-item">
+            <%= product.name %>
+
+            <div class="right">
+            <%= link "edit", to: Routes.product_path(@conn, :edit, product) %>
+            </div>
+
+
+        </li>
+    <% end %>
+</ol>
+
+<div class="fixed-action-btn">
+<%= link to: Routes.product_path(@conn, :new), class: "btn-floaing btn-large waves-effects waves-light green" do %>
+<i class="material-icons">Add Product</i>
+<% end %>
+</a>
+</div>

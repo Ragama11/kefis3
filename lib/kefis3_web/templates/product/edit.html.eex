@@ -1,0 +1,13 @@
+<%= form_for @changeset , Routes.product_path(@conn, :update, @product), fn f -> %>
+ <div class="form-group">
+        <%= text_input f, :name, [placeholder: "Name", class: "form-control"] %>
+        <%= text_input f, :price, [placeholder: "Price", class: "form-control"] %>
+        <%= text_input f, :quantity, [placeholder: "Quantity", class: "form-control"] %>
+        <%= error_tag f, :name %>
+        <%= error_tag f, :price %>
+        <%= error_tag f, :quantity %>
+    </div>
+
+     <%= submit "Update Product", class: "btn btn-primary" %>
+
+<% end %>
