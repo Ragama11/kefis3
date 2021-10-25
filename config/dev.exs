@@ -3,7 +3,7 @@ use Mix.Config
 # Configure your database
 config :kefis3, Kefis3.Repo,
   username: "postgres",
-  password: "Kimuhu@Dossy11",
+  password: "postgres",#Kimuhu@Dossy11
   database: "kefis3_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,

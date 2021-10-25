@@ -18,6 +18,10 @@ defmodule Kefis3Web.Router do
 
     get "/inventory", ProductController, :inventory
     get "/products/new", ProductController, :new
+
+    get "/products/:id/sell", ProductController, :sell
+    put "/products/:id/sell", ProductController, :sold
+
     post "/products", ProductController, :create
     get "/products/:id/edit", ProductController, :edit
     put "/products/:id", ProductController, :update

@@ -6,6 +6,8 @@
 
             <div class="right">
             <%= link "edit", to: Routes.product_path(@conn, :edit, product) %>
+            <%= link "sell", to: Routes.product_path(@conn, :sell, product) %>
+
             </div>
 
 

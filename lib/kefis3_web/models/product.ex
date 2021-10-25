@@ -14,4 +14,14 @@ defmodule Kefis3Web.Product do
     |> cast(params, [:name, :price, :quantity])
     |> validate_required([:name, :price, :quantity])
   end
+
+
+  def sell_changeset(struct, params) do
+    struct
+    |> changeset(params)
+    |> validate_number(:quantity, greater_than: 0)
+  end
+
+
+
 end

@@ -1,0 +1,6 @@
+<%= form_for @changeset , Routes.product_path(@conn, :sold, @product), fn f -> %>
+ <div class="form-group">
+        <%= number_input f, :amount_sold, [placeholder: "Amount", class: "form-control", min: 1] %>
+    </div>
+     <%= submit "Confirm", class: "btn btn-primary" %>
+<% end %>
